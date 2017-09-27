@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E80EF091F7B4155008419BD /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3E80EF081F7B40A8008419BD /* Inceptionv3.mlmodel */; };
+		3E80EF0B1F7B4D0C008419BD /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E80EF0A1F7B4D0C008419BD /* ImageUtil.swift */; };
 		3E95ABFA1F6D6B3E00AAEF5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E95ABF91F6D6B3E00AAEF5F /* AppDelegate.swift */; };
 		3E95ABFC1F6D6B3E00AAEF5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E95ABFB1F6D6B3E00AAEF5F /* ViewController.swift */; };
 		3E95ABFF1F6D6B3E00AAEF5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E95ABFD1F6D6B3E00AAEF5F /* Main.storyboard */; };
@@ -14,6 +16,7 @@
 		3E95AC041F6D6B3E00AAEF5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E95AC021F6D6B3E00AAEF5F /* LaunchScreen.storyboard */; };
 		3E95AC0F1F6D6B3E00AAEF5F /* CoreMLTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E95AC0E1F6D6B3E00AAEF5F /* CoreMLTestTests.swift */; };
 		3E95AC1A1F6D6B3E00AAEF5F /* CoreMLTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E95AC191F6D6B3E00AAEF5F /* CoreMLTestUITests.swift */; };
+		3E95AC291F6D6BB600AAEF5F /* CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E95AC281F6D6BB600AAEF5F /* CoreML.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E80EF081F7B40A8008419BD /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		3E80EF0A1F7B4D0C008419BD /* ImageUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtil.swift; sourceTree = "<group>"; };
 		3E95ABF61F6D6B3E00AAEF5F /* CoreMLTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreMLTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E95ABF91F6D6B3E00AAEF5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E95ABFB1F6D6B3E00AAEF5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +52,7 @@
 		3E95AC151F6D6B3E00AAEF5F /* CoreMLTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreMLTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E95AC191F6D6B3E00AAEF5F /* CoreMLTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLTestUITests.swift; sourceTree = "<group>"; };
 		3E95AC1B1F6D6B3E00AAEF5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E95AC281F6D6BB600AAEF5F /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = System/Library/Frameworks/CoreML.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E95AC291F6D6BB600AAEF5F /* CoreML.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +88,7 @@
 				3E95AC0D1F6D6B3E00AAEF5F /* CoreMLTestTests */,
 				3E95AC181F6D6B3E00AAEF5F /* CoreMLTestUITests */,
 				3E95ABF71F6D6B3E00AAEF5F /* Products */,
+				3E95AC271F6D6BB600AAEF5F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,7 +107,9 @@
 			children = (
 				3E95ABF91F6D6B3E00AAEF5F /* AppDelegate.swift */,
 				3E95ABFB1F6D6B3E00AAEF5F /* ViewController.swift */,
+				3E80EF0A1F7B4D0C008419BD /* ImageUtil.swift */,
 				3E95ABFD1F6D6B3E00AAEF5F /* Main.storyboard */,
+				3E80EF081F7B40A8008419BD /* Inceptionv3.mlmodel */,
 				3E95AC001F6D6B3E00AAEF5F /* Assets.xcassets */,
 				3E95AC021F6D6B3E00AAEF5F /* LaunchScreen.storyboard */,
 				3E95AC051F6D6B3E00AAEF5F /* Info.plist */,
@@ -123,6 +133,14 @@
 				3E95AC1B1F6D6B3E00AAEF5F /* Info.plist */,
 			);
 			path = CoreMLTestUITests;
+			sourceTree = "<group>";
+		};
+		3E95AC271F6D6BB600AAEF5F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E95AC281F6D6BB600AAEF5F /* CoreML.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +211,7 @@
 				TargetAttributes = {
 					3E95ABF51F6D6B3E00AAEF5F = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					3E95AC091F6D6B3E00AAEF5F = {
 						CreatedOnToolsVersion = 9.0;
@@ -259,8 +277,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E80EF091F7B4155008419BD /* Inceptionv3.mlmodel in Sources */,
 				3E95ABFC1F6D6B3E00AAEF5F /* ViewController.swift in Sources */,
 				3E95ABFA1F6D6B3E00AAEF5F /* AppDelegate.swift in Sources */,
+				3E80EF0B1F7B4D0C008419BD /* ImageUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,12 +446,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RS44JP5XUM;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = Q87QUX3533;
 				INFOPLIST_FILE = CoreMLTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.youzu.CoreMLTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7ca920fb-ae43-4ba6-a96e-14db157e0b13";
+				PROVISIONING_PROFILE_SPECIFIER = MobProvisioningProfiles;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -441,12 +463,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RS44JP5XUM;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = Q87QUX3533;
 				INFOPLIST_FILE = CoreMLTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.youzu.CoreMLTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7ca920fb-ae43-4ba6-a96e-14db157e0b13";
+				PROVISIONING_PROFILE_SPECIFIER = MobProvisioningProfiles;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
