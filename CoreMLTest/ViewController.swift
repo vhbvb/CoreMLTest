@@ -21,24 +21,6 @@ class ViewController: UIViewController, ImageConvertUtil{
     var label = UILabel()
     var queue : DispatchQueue?
     
-    lazy var textRectView = { () -> UIView in
-        
-        let view = UIView()
-        view.layer.borderWidth = 1.5;
-        view.layer.borderColor = UIColor.green.cgColor
-        view.isHidden = true
-        return view;
-    }()
-    
-    lazy var faceRectView = { () -> UIView in
-        
-        let view = UIView()
-        view.layer.borderWidth = 1.5;
-        view.layer.borderColor = UIColor.red.cgColor
-        view.isHidden = true
-        return view;
-    }()
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -106,9 +88,6 @@ class ViewController: UIViewController, ImageConvertUtil{
         self.label.textColor = UIColor.white
         self.label.backgroundColor = UIColor.black
         self.view.addSubview(self.label)
-        
-        self.view.addSubview(self.textRectView)
-        self.view.addSubview(self.faceRectView)
     }
     
     func start()
@@ -163,16 +142,12 @@ class ViewController: UIViewController, ImageConvertUtil{
                 
                 guard let results = (req as? VNDetectTextRectanglesRequest)?.results else { return }
                 
-                guard let observation = results.first as? VNTextObservation else { return }
-                
-                DispatchQueue.main.async {
-                    guard observation.confidence >= 0.3 else {
-                        self.textRectView.isHidden = true
-                        return
+                for obj in results
+                {
+                    if let observation = obj as? VNTextObservation , observation.confidence >= 0.3
+                    {
+                        self._addTextRectLayer(self._transformBoundingBox(observation.boundingBox))
                     }
-                    
-                    self.textRectView.isHidden = false;
-                    self.textRectView.frame = self._transformBoundingBox(observation.boundingBox)
                 }
             })
             
@@ -181,24 +156,30 @@ class ViewController: UIViewController, ImageConvertUtil{
                 
                 guard let results = (req as? VNDetectFaceRectanglesRequest)?.results else { return }
                 
-                guard let observation = results.first as? VNFaceObservation else { return }
-                
-                DispatchQueue.main.async {
-                    guard observation.confidence >= 0.3 else {
-                        self.faceRectView.isHidden = true
-                        return
+                for obj in results
+                {
+                    if let observation = obj as? VNFaceObservation , observation.confidence >= 0.3
+                    {
+                        self._addFaceRectLayer(self._transformBoundingBox(observation.boundingBox))
                     }
-                    
-                    self.faceRectView.isHidden = false;
-                    self.faceRectView.frame = self._transformBoundingBox(observation.boundingBox)
                 }
             })
             
-//            let faceLandDetectReq = VNDetectFaceLandmarksRequest.init(completionHandler: { (req, error) in
-//                print("Req:\n\(String(describing: req.results))\nError:\(String(describing: error))")
-//            })
+            let faceLandDetectReq = VNDetectFaceLandmarksRequest.init(completionHandler: { (req, error) in
+                
+                guard let results = (req as? VNDetectFaceLandmarksRequest)?.results else { return }
+                
+                for obj in results
+                {
+                    if let observation = obj as? VNFaceObservation ,
+                        let points = observation.landmarks?.allPoints?.normalizedPoints
+                    {
+                        self._addPoints(points, boundingBox: observation.boundingBox)
+                    }
+                }
+            })
             
-            try?handler.perform([textDetectReq,faceDetectReq])
+            try?handler.perform([textDetectReq,faceDetectReq,faceLandDetectReq])
         }
     }
     
@@ -211,6 +192,64 @@ class ViewController: UIViewController, ImageConvertUtil{
         rect.origin.x = frame.width * boundingBox.minX
         rect.origin.y = frame.height - frame.height * boundingBox.minY - rect.height
         return rect
+    }
+    
+    func _transformLandmarkPoint(_ point:CGPoint , boundingBox:CGRect) -> CGPoint
+    {
+        let frame = self.view.frame
+        
+        let width = frame.width * boundingBox.width
+        let height = frame.height * boundingBox.height
+        let x = frame.width * boundingBox.minX
+        let y = frame.height - frame.height * boundingBox.minY - height
+        
+        return CGPoint(x: x + point.x * width , y: y + (1 - point.y) * height)
+    }
+    
+    func _addTextRectLayer(_ frame:CGRect)
+    {
+        let layer = CALayer()
+        layer.frame = frame
+        layer.borderColor = UIColor.green.cgColor
+        layer.borderWidth = 2
+        DispatchQueue.main.async {
+            self.view.layer.addSublayer(layer)
+        }
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.25) {
+            layer.removeFromSuperlayer()
+        }
+    }
+    
+    func _addFaceRectLayer(_ frame:CGRect)
+    {
+        let layer = CALayer()
+        layer.frame = frame
+        layer.borderColor = UIColor.red.cgColor
+        layer.borderWidth = 2
+        DispatchQueue.main.async {
+            self.view.layer.addSublayer(layer)
+        }
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.25) {
+            layer.removeFromSuperlayer()
+        }
+    }
+    
+    func _addPoints(_ points:[CGPoint] , boundingBox:CGRect)
+    {
+        for point in points
+        {
+            let loc = self._transformLandmarkPoint(point, boundingBox: boundingBox)
+            let layer = CALayer()
+            layer.frame = CGRect.init(x: loc.x-0.75, y: loc.y-0.75, width: 2, height: 2)
+            layer.backgroundColor = UIColor.red.cgColor
+            
+            DispatchQueue.main.async {
+                self.view.layer.addSublayer(layer)
+            }
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.25) {
+                layer.removeFromSuperlayer()
+            }
+        }
     }
 }
 
