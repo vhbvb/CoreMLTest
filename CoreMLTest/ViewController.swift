@@ -267,7 +267,7 @@ extension ViewController : AVCaptureVideoDataOutputSampleBufferDelegate
         
         if filter.flag {
             filter.flag = false
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.25, execute: {
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.2, execute: {
                 filter.flag = true
             })
             
