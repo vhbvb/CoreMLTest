@@ -74,7 +74,6 @@ extension ImageConvertUtil
             {
                 CVPixelBufferLockBaseAddress(buffer, .init(rawValue: 0))
                 let pxdata = CVPixelBufferGetBaseAddressOfPlane(buffer, 0)
-                
                 let colorSpace = CGColorSpaceCreateDeviceRGB()
                 
                 if let context = CGContext(data: pxdata,

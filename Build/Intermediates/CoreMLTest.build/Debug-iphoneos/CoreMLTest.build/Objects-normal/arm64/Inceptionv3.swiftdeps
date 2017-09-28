@@ -1,0 +1,261 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Inceptionv3Input"
+- "Inceptionv3Output"
+- "Inceptionv3"
+provides-nominal:
+- "10CoreMLTest16Inceptionv3InputC"
+- "10CoreMLTest17Inceptionv3OutputC"
+- "10CoreMLTest11Inceptionv3C"
+provides-member:
+- ["10CoreMLTest16Inceptionv3InputC", ""]
+- ["10CoreMLTest17Inceptionv3OutputC", ""]
+- ["10CoreMLTest11Inceptionv3C", ""]
+provides-dynamic-lookup:
+- "featureNames"
+- "featureValue"
+depends-top-level:
+- !private "=="
+- !private "Array"
+- "AssignmentPrecedence"
+- !private "Bundle"
+- "CVPixelBuffer"
+- "CastingPrecedence"
+- "Double"
+- "Inceptionv3"
+- "Inceptionv3Input"
+- "Inceptionv3Output"
+- "MLFeatureProvider"
+- "MLFeatureValue"
+- "MLModel"
+- !private "NSNumber"
+- !private "NSObject"
+- "Set"
+- "String"
+- !private "StringLiteralType"
+- "URL"
+depends-member:
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["So6BundleC", "init"]
+- !private ["So6BundleC", "url"]
+- !private ["s7CVarArgP", "dictionaryValue"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "prediction"]
+- !private ["s7CVarArgP", "stringValue"]
+- !private ["s7CVarArgP", "url"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "dictionaryValue"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "prediction"]
+- !private ["s28CustomDebugStringConvertibleP", "stringValue"]
+- !private ["s28CustomDebugStringConvertibleP", "url"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "dictionaryValue"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "prediction"]
+- !private ["s23CustomStringConvertibleP", "stringValue"]
+- !private ["s23CustomStringConvertibleP", "url"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "dictionaryValue"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "prediction"]
+- !private ["s9EquatableP", "stringValue"]
+- !private ["s9EquatableP", "url"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "dictionaryValue"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "prediction"]
+- !private ["s8HashableP", "stringValue"]
+- !private ["s8HashableP", "url"]
+- !private ["10CoreMLTest11Inceptionv3C", "Bundle"]
+- ["10CoreMLTest11Inceptionv3C", "CVPixelBuffer"]
+- !private ["10CoreMLTest11Inceptionv3C", "Double"]
+- !private ["10CoreMLTest11Inceptionv3C", "Inceptionv3"]
+- ["10CoreMLTest11Inceptionv3C", "Inceptionv3Input"]
+- ["10CoreMLTest11Inceptionv3C", "Inceptionv3Output"]
+- ["10CoreMLTest11Inceptionv3C", "MLModel"]
+- !private ["10CoreMLTest11Inceptionv3C", "String"]
+- ["10CoreMLTest11Inceptionv3C", "URL"]
+- ["10CoreMLTest11Inceptionv3C", "deinit"]
+- ["10CoreMLTest11Inceptionv3C", "init"]
+- ["10CoreMLTest11Inceptionv3C", "model"]
+- ["10CoreMLTest11Inceptionv3C", "prediction"]
+- ["10CoreMLTest16Inceptionv3InputC", "CVPixelBuffer"]
+- ["10CoreMLTest16Inceptionv3InputC", "MLFeatureValue"]
+- ["10CoreMLTest16Inceptionv3InputC", "Set"]
+- ["10CoreMLTest16Inceptionv3InputC", "String"]
+- ["10CoreMLTest16Inceptionv3InputC", "deinit"]
+- ["10CoreMLTest16Inceptionv3InputC", "featureNames"]
+- ["10CoreMLTest16Inceptionv3InputC", "featureValue"]
+- ["10CoreMLTest16Inceptionv3InputC", "featureValueForName"]
+- ["10CoreMLTest16Inceptionv3InputC", "image"]
+- ["10CoreMLTest16Inceptionv3InputC", "init"]
+- ["10CoreMLTest17Inceptionv3OutputC", "Double"]
+- ["10CoreMLTest17Inceptionv3OutputC", "MLFeatureValue"]
+- !private ["10CoreMLTest17Inceptionv3OutputC", "NSNumber"]
+- !private ["10CoreMLTest17Inceptionv3OutputC", "NSObject"]
+- ["10CoreMLTest17Inceptionv3OutputC", "Set"]
+- ["10CoreMLTest17Inceptionv3OutputC", "String"]
+- ["10CoreMLTest17Inceptionv3OutputC", "classLabel"]
+- ["10CoreMLTest17Inceptionv3OutputC", "classLabelProbs"]
+- ["10CoreMLTest17Inceptionv3OutputC", "deinit"]
+- ["10CoreMLTest17Inceptionv3OutputC", "featureNames"]
+- ["10CoreMLTest17Inceptionv3OutputC", "featureValue"]
+- ["10CoreMLTest17Inceptionv3OutputC", "featureValueForName"]
+- ["10CoreMLTest17Inceptionv3OutputC", "init"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["So17MLFeatureProviderP", "MLFeatureValue"]
+- !private ["So17MLFeatureProviderP", "classLabel"]
+- !private ["So17MLFeatureProviderP", "classLabelProbs"]
+- ["So17MLFeatureProviderP", "featureNames"]
+- ["So17MLFeatureProviderP", "featureValue"]
+- ["So17MLFeatureProviderP", "featureValueForName"]
+- !private ["So17MLFeatureProviderP", "image"]
+- !private ["So17MLFeatureProviderP", "init"]
+- ["So17MLFeatureProviderP", ""]
+- !private ["So14MLFeatureValueC", "dictionaryValue"]
+- !private ["So14MLFeatureValueC", "init"]
+- !private ["So14MLFeatureValueC", "stringValue"]
+- !private ["So7MLModelC", "init"]
+- !private ["So7MLModelC", "prediction"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So9NSCopyingP", "dictionaryValue"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "stringValue"]
+- !private ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderWritingP", "init"]
+- !private ["So16NSMutableCopyingP", "init"]
+- !private ["So8NSObjectC", "dictionaryValue"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "prediction"]
+- !private ["So8NSObjectC", "stringValue"]
+- !private ["So8NSObjectC", "url"]
+- !private ["So16NSObjectProtocolP", "dictionaryValue"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "prediction"]
+- !private ["So16NSObjectProtocolP", "stringValue"]
+- !private ["So16NSObjectProtocolP", "url"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So8NSStringC", "init"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s8SequenceP", "init"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s23_BidirectionalIndexableP", "init"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s10_IndexableP", "init"]
+- !private ["s14_IndexableBaseP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dictionaryValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "prediction"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stringValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "url"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s26_RangeReplaceableIndexableP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "s23BidirectionalCollectionP"
+- !private "Sb"
+- !private "So6BundleC"
+- !private "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- !private "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s8HashableP"
+- "10CoreMLTest11Inceptionv3C"
+- "10CoreMLTest16Inceptionv3InputC"
+- "10CoreMLTest17Inceptionv3OutputC"
+- !private "s25LosslessStringConvertibleP"
+- "So17MLFeatureProviderP"
+- !private "So14MLFeatureValueC"
+- !private "So7MLModelC"
+- !private "s10MirrorPathP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- !private "So8NSObjectC"
+- !private "So16NSObjectProtocolP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s8SequenceP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "s23_BidirectionalIndexableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "s10_IndexableP"
+- !private "s14_IndexableBaseP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s26_RangeReplaceableIndexableP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/simd.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Vision.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreAudio.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/System/Library/Frameworks/Vision.framework/Headers/Vision.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+interface-hash: "e37c3d9669a9247a15fdbf99a0ff39cb"

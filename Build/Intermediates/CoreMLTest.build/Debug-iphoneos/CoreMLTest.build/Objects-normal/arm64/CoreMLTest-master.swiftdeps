@@ -1,0 +1,8 @@
+version: "Apple Swift version 4.0 (swiftlang-900.0.65 clang-900.0.37)"
+options: "0a6bd8bee68b04cd095be95e6c60c7d9"
+build_time: [1506568939, 478832000]
+inputs:
+  "/Users/youzu/Desktop/CoreML/CoreMLTest/ViewController.swift": [1506568902, 0]
+  "/Users/youzu/Desktop/CoreML/CoreMLTest/AppDelegate.swift": [1505571774, 0]
+  "/Users/youzu/Desktop/CoreML/CoreMLTest/ImageUtil.swift": [1506501229, 0]
+  "/Users/youzu/Desktop/CoreML/Build/Intermediates/CoreMLTest.build/Debug-iphoneos/CoreMLTest.build/DerivedSources/CoreMLGenerated/Inceptionv3/Inceptionv3.swift": [1506568939, 0]
