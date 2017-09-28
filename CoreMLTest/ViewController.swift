@@ -146,7 +146,7 @@ class ViewController: UIViewController, ImageConvertUtil{
                 {
                     if let observation = obj as? VNTextObservation , observation.confidence >= 0.3
                     {
-                        self._addTextRectLayer(self._transformBoundingBox(observation.boundingBox))
+                        self.addTextRectLayer(self.transformBoundingBox(observation.boundingBox))
                     }
                 }
             })
@@ -160,7 +160,7 @@ class ViewController: UIViewController, ImageConvertUtil{
                 {
                     if let observation = obj as? VNFaceObservation , observation.confidence >= 0.3
                     {
-                        self._addFaceRectLayer(self._transformBoundingBox(observation.boundingBox))
+                        self.addFaceRectLayer(self.transformBoundingBox(observation.boundingBox))
                     }
                 }
             })
@@ -174,7 +174,7 @@ class ViewController: UIViewController, ImageConvertUtil{
                     if let observation = obj as? VNFaceObservation ,
                         let points = observation.landmarks?.allPoints?.normalizedPoints
                     {
-                        self._addPoints(points, boundingBox: observation.boundingBox)
+                        self.addPoints(points, boundingBox: observation.boundingBox)
                     }
                 }
             })
@@ -183,7 +183,7 @@ class ViewController: UIViewController, ImageConvertUtil{
         }
     }
     
-    func _transformBoundingBox(_ boundingBox:CGRect) -> CGRect
+    func transformBoundingBox(_ boundingBox:CGRect) -> CGRect
     {
         var rect = CGRect.zero
         let frame = self.view.frame
@@ -194,7 +194,7 @@ class ViewController: UIViewController, ImageConvertUtil{
         return rect
     }
     
-    func _transformLandmarkPoint(_ point:CGPoint , boundingBox:CGRect) -> CGPoint
+    func transformLandmarkPoint(_ point:CGPoint , boundingBox:CGRect) -> CGPoint
     {
         let frame = self.view.frame
         
@@ -206,7 +206,7 @@ class ViewController: UIViewController, ImageConvertUtil{
         return CGPoint(x: x + point.x * width , y: y + (1 - point.y) * height)
     }
     
-    func _addTextRectLayer(_ frame:CGRect)
+    func addTextRectLayer(_ frame:CGRect)
     {
         let layer = CALayer()
         layer.frame = frame
@@ -220,7 +220,7 @@ class ViewController: UIViewController, ImageConvertUtil{
         }
     }
     
-    func _addFaceRectLayer(_ frame:CGRect)
+    func addFaceRectLayer(_ frame:CGRect)
     {
         let layer = CALayer()
         layer.frame = frame
@@ -234,11 +234,11 @@ class ViewController: UIViewController, ImageConvertUtil{
         }
     }
     
-    func _addPoints(_ points:[CGPoint] , boundingBox:CGRect)
+    func addPoints(_ points:[CGPoint] , boundingBox:CGRect)
     {
         for point in points
         {
-            let loc = self._transformLandmarkPoint(point, boundingBox: boundingBox)
+            let loc = self.transformLandmarkPoint(point, boundingBox: boundingBox)
             let layer = CALayer()
             layer.frame = CGRect.init(x: loc.x-0.75, y: loc.y-0.75, width: 2, height: 2)
             layer.backgroundColor = UIColor.red.cgColor
