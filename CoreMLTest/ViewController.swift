@@ -144,7 +144,6 @@ class ViewController: UIViewController, ImageConvertUtil{
         {
            if let output = try? model.prediction(image: buffer)
            {
-                print("---------------> res : \(output.classLabel)")
                 return output.classLabel;
             }
         }
@@ -153,9 +152,9 @@ class ViewController: UIViewController, ImageConvertUtil{
     }
     
     //VN
-    func detectImage(_ image:UIImage?)
+    func detectImage(_ image:CMSampleBuffer)
     {
-        if let sourceImg = image , let buffer = self.buffer(withImage: sourceImg)
+        if let buffer = CMSampleBufferGetImageBuffer(image)
         {
             let handler = VNImageRequestHandler.init(cvPixelBuffer: buffer, options: [:])
             //文本侦测
@@ -223,12 +222,20 @@ extension ViewController : AVCaptureVideoDataOutputSampleBufferDelegate
     
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         
-        DispatchQueue(label:"sampleBuffer").async {
-            let image = self.image(withBuffer: sampleBuffer)
-            let text = self.recognizeImage(image);
-            self.detectImage(image)
+        struct filter {
+            static var flag = true
+        }
+        
+        if filter.flag {
+            filter.flag = false
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.25, execute: {
+                filter.flag = true
+            })
+            
             DispatchQueue.main.async {
-                self.label.text = text;
+                let image = self.image(withBuffer: sampleBuffer)
+                self.label.text = self.recognizeImage(image);
+                self.detectImage(sampleBuffer)
             }
         }
     }
