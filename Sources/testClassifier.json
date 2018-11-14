@@ -1,0 +1,10 @@
+[{
+	"text": "I am really excited, would definitely recommend it highly!",
+	"label": "Positive"
+}, {
+	"text": "It was OK, something I could live with for now.",
+	"label": "Neutral"
+}, {
+	"text": "This was terrible, much worse than I expected.",
+	"label": "Negative"
+}]

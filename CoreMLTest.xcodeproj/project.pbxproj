@@ -19,6 +19,7 @@
 		3E95AC291F6D6BB600AAEF5F /* CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E95AC281F6D6BB600AAEF5F /* CoreML.framework */; };
 		500A33FC219964570006394A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500A33FB219964570006394A /* ViewController.swift */; };
 		500A33FE2199673C0006394A /* NLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500A33FD2199673C0006394A /* NLViewController.swift */; };
+		5029ACF6219BF99600C5685B /* TestClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5029ACF5219BF99600C5685B /* TestClassifier.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		3E95AC281F6D6BB600AAEF5F /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = System/Library/Frameworks/CoreML.framework; sourceTree = SDKROOT; };
 		500A33FB219964570006394A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		500A33FD2199673C0006394A /* NLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLViewController.swift; sourceTree = "<group>"; };
+		5029ACF5219BF99600C5685B /* TestClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TestClassifier.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				500A33FD2199673C0006394A /* NLViewController.swift */,
 				3E80EF0A1F7B4D0C008419BD /* ImageUtil.swift */,
 				3E95ABFD1F6D6B3E00AAEF5F /* Main.storyboard */,
+				5029ACF5219BF99600C5685B /* TestClassifier.mlmodel */,
 				3E80EF081F7B40A8008419BD /* Inceptionv3.mlmodel */,
 				3E95AC001F6D6B3E00AAEF5F /* Assets.xcassets */,
 				3E95AC021F6D6B3E00AAEF5F /* LaunchScreen.storyboard */,
@@ -284,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				500A33FE2199673C0006394A /* NLViewController.swift in Sources */,
+				5029ACF6219BF99600C5685B /* TestClassifier.mlmodel in Sources */,
 				500A33FC219964570006394A /* ViewController.swift in Sources */,
 				3E80EF091F7B4155008419BD /* Inceptionv3.mlmodel in Sources */,
 				3E95ABFC1F6D6B3E00AAEF5F /* VisionViewController.swift in Sources */,
