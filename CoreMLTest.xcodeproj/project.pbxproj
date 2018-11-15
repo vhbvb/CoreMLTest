@@ -20,6 +20,8 @@
 		500A33FC219964570006394A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500A33FB219964570006394A /* ViewController.swift */; };
 		500A33FE2199673C0006394A /* NLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500A33FD2199673C0006394A /* NLViewController.swift */; };
 		5029ACF6219BF99600C5685B /* TestClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5029ACF5219BF99600C5685B /* TestClassifier.mlmodel */; };
+		5029ACF8219D1E3B00C5685B /* ImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5029ACF7219D1E3B00C5685B /* ImageClassifier.mlmodel */; };
+		5029ACFA219D1E7100C5685B /* ImageDetectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5029ACF9219D1E7100C5685B /* ImageDetectorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		500A33FB219964570006394A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		500A33FD2199673C0006394A /* NLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLViewController.swift; sourceTree = "<group>"; };
 		5029ACF5219BF99600C5685B /* TestClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TestClassifier.mlmodel; sourceTree = "<group>"; };
+		5029ACF7219D1E3B00C5685B /* ImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ImageClassifier.mlmodel; sourceTree = "<group>"; };
+		5029ACF9219D1E7100C5685B /* ImageDetectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetectorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,10 +117,12 @@
 			children = (
 				3E95ABF91F6D6B3E00AAEF5F /* AppDelegate.swift */,
 				500A33FB219964570006394A /* ViewController.swift */,
+				5029ACF9219D1E7100C5685B /* ImageDetectorViewController.swift */,
 				3E95ABFB1F6D6B3E00AAEF5F /* VisionViewController.swift */,
 				500A33FD2199673C0006394A /* NLViewController.swift */,
 				3E80EF0A1F7B4D0C008419BD /* ImageUtil.swift */,
 				3E95ABFD1F6D6B3E00AAEF5F /* Main.storyboard */,
+				5029ACF7219D1E3B00C5685B /* ImageClassifier.mlmodel */,
 				5029ACF5219BF99600C5685B /* TestClassifier.mlmodel */,
 				3E80EF081F7B40A8008419BD /* Inceptionv3.mlmodel */,
 				3E95AC001F6D6B3E00AAEF5F /* Assets.xcassets */,
@@ -293,6 +299,8 @@
 				3E95ABFC1F6D6B3E00AAEF5F /* VisionViewController.swift in Sources */,
 				3E95ABFA1F6D6B3E00AAEF5F /* AppDelegate.swift in Sources */,
 				3E80EF0B1F7B4D0C008419BD /* ImageUtil.swift in Sources */,
+				5029ACF8219D1E3B00C5685B /* ImageClassifier.mlmodel in Sources */,
+				5029ACFA219D1E7100C5685B /* ImageDetectorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

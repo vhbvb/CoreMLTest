@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     let tableView = UITableView()
     
-    let titles = ["Vision","NaturalLanguage"];
+    let titles = ["Vision","NaturalLanguage","CustomImageDetector"];
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,11 +45,14 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
      
+        tableView.deselectRow(at: indexPath, animated: true)
         switch indexPath.row {
         case 0:
             navigationController?.pushViewController(VisionViewController(), animated: true);
         case 1:
             navigationController?.pushViewController(NLViewController(), animated: true);
+        case 2:
+            navigationController?.pushViewController(ImageDetectorViewController(), animated: true);
         default: break
         }
     }
