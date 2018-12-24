@@ -22,6 +22,8 @@
 		5029ACF6219BF99600C5685B /* TestClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5029ACF5219BF99600C5685B /* TestClassifier.mlmodel */; };
 		5029ACF8219D1E3B00C5685B /* ImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5029ACF7219D1E3B00C5685B /* ImageClassifier.mlmodel */; };
 		5029ACFA219D1E7100C5685B /* ImageDetectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5029ACF9219D1E7100C5685B /* ImageDetectorViewController.swift */; };
+		5029ACFC219D7B5900C5685B /* QuantizedInceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5029ACFB219D7B5900C5685B /* QuantizedInceptionv3.mlmodel */; };
+		505622EC21B90C0000248C94 /* SexImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 505622EB21B90C0000248C94 /* SexImageClassifier.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		5029ACF5219BF99600C5685B /* TestClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TestClassifier.mlmodel; sourceTree = "<group>"; };
 		5029ACF7219D1E3B00C5685B /* ImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ImageClassifier.mlmodel; sourceTree = "<group>"; };
 		5029ACF9219D1E7100C5685B /* ImageDetectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetectorViewController.swift; sourceTree = "<group>"; };
+		5029ACFB219D7B5900C5685B /* QuantizedInceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = QuantizedInceptionv3.mlmodel; sourceTree = "<group>"; };
+		505622EB21B90C0000248C94 /* SexImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SexImageClassifier.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,8 @@
 				5029ACF7219D1E3B00C5685B /* ImageClassifier.mlmodel */,
 				5029ACF5219BF99600C5685B /* TestClassifier.mlmodel */,
 				3E80EF081F7B40A8008419BD /* Inceptionv3.mlmodel */,
+				5029ACFB219D7B5900C5685B /* QuantizedInceptionv3.mlmodel */,
+				505622EB21B90C0000248C94 /* SexImageClassifier.mlmodel */,
 				3E95AC001F6D6B3E00AAEF5F /* Assets.xcassets */,
 				3E95AC021F6D6B3E00AAEF5F /* LaunchScreen.storyboard */,
 				3E95AC051F6D6B3E00AAEF5F /* Info.plist */,
@@ -292,7 +298,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				505622EC21B90C0000248C94 /* SexImageClassifier.mlmodel in Sources */,
 				500A33FE2199673C0006394A /* NLViewController.swift in Sources */,
+				5029ACFC219D7B5900C5685B /* QuantizedInceptionv3.mlmodel in Sources */,
 				5029ACF6219BF99600C5685B /* TestClassifier.mlmodel in Sources */,
 				500A33FC219964570006394A /* ViewController.swift in Sources */,
 				3E80EF091F7B4155008419BD /* Inceptionv3.mlmodel in Sources */,

@@ -118,16 +118,20 @@ class VisionViewController: UIViewController, ImageConvertUtil{
     //ML
     func recognizeImage(_ image:UIImage?) -> String?
     {
-        let model = Inceptionv3()
-        
-        if let scaledImage = self.scaleTo299(image), let buffer = self.buffer(withImage: scaledImage)
-        {
-           if let output = try? model.prediction(image: buffer)
-           {
-                return output.classLabel;
+        if #available(iOS 11.2, *) {
+//            let model = QuantizedInceptionv3()
+            let classifier = SexImageClassifier()
+            if let scaledImage = self.scaleTo299(image), let buffer = self.buffer(withImage: scaledImage)
+            {
+                if let output = try? classifier.prediction(image: buffer)
+                {
+                    return output.classLabel;
+                }
             }
+        } else {
+            // Fallback on earlier versions
         }
-        
+
         return nil
     }
     

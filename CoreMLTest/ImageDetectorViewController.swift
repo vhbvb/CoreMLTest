@@ -69,7 +69,9 @@ class ImageDetectorViewController: UIViewController,ImageConvertUtil {
 //            bg.addSubview(imageView)
 //            view.addSubview(bg)
             
-            if let output = try? ImageClassifier().prediction(image: buffer)
+            
+            let classifier = ImageClassifier()
+            if let output = try? classifier.prediction(image: buffer)
             {
                 return (output.classLabel,output.classLabelProbs[output.classLabel]);
             }
